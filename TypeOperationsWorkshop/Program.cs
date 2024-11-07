@@ -10,12 +10,12 @@ class Program
 		string groupNumber = Console.ReadLine();
 		bool hasHomePet = age > 50;
 		
-        Console.WriteLine("Анкета студента:");
-        Console.WriteLine($"Вас зовут {name}");
-        Console.WriteLine("Вам " + age + " лет");
-        Console.WriteLine("Вы на " + course + " курсе");
-        Console.WriteLine("В группе " + groupNumber);
-        Console.WriteLine("Есть ли у вас домашний питомец: " + hasHomePet);		
-	
+		Console.WriteLine("Анкета студента:");
+		Console.WriteLine($"Вас зовут {name}");
+		Console.WriteLine("Вам " + age + " лет");
+		Console.WriteLine("Вы на " + course + " курсе");
+		Console.WriteLine("В группе " + groupNumber);
+		Console.WriteLine("Есть ли у вас домашний питомец: " + hasHomePet);		
+
     }
 }
