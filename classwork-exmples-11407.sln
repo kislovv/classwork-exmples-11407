@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcedureTestTasks", "Proce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcedureProgrammingTestTests", "ProcedureProgrammingTestTests\ProcedureProgrammingTestTests.csproj", "{185E117F-123B-4623-84E7-8C773A0C19B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopPrincipal", "OopPrincipal\OopPrincipal.csproj", "{D3AD951E-7176-4DEE-A005-701DC92C4995}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{185E117F-123B-4623-84E7-8C773A0C19B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{185E117F-123B-4623-84E7-8C773A0C19B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{185E117F-123B-4623-84E7-8C773A0C19B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3AD951E-7176-4DEE-A005-701DC92C4995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3AD951E-7176-4DEE-A005-701DC92C4995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3AD951E-7176-4DEE-A005-701DC92C4995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3AD951E-7176-4DEE-A005-701DC92C4995}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
