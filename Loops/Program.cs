@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace Loops;
 
@@ -69,7 +68,6 @@ class Program
 			i++;
 		}
 	}
-	
 	bool CheckPalindrome(int n) 
 	{
 		if (n > 9999 || n < 1) 
@@ -87,7 +85,6 @@ class Program
 		return ((n % 1000 / 100) == (n % 100 / 10)) && (n / 1000 == n % 10);
 		
 	}
-	
 	string FindUniqueChars(string a, string b, string c)
 	{
 		string result = "";
@@ -165,8 +162,6 @@ class Program
 
         return uniqueCount;
     }
-	
-	
 	static int NumUniqueEmails(string[] emails)
     {
         string[] uniqueEmails = new string[emails.Length];
@@ -220,8 +215,6 @@ class Program
 
         return uniqueCount;
     }
-	
-	
 	static bool WordPattern(string pattern, string s) {
         string[] words = s.Split(' ');
         
