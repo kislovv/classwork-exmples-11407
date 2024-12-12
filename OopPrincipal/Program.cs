@@ -4,19 +4,33 @@ class Program
 {
     static void Main(string[] args)
     {
-        var student = new Student("Kislov Kirill");
-        var student2 = new Student("Kislov Kirill", TypeOfStudy.University);
-        var student3 = new Student("LOLOLO")
+        var student = new Student("Kislov Kirill" , 18);
+        var student2 = new Student("Kislov Kirill",
+            7, TypeOfStudy.School,
+            DateOnly.FromDateTime(DateTime.Now.AddYears(11)));
+        
+        var student3 = new Student("LOLOLO", 78)
         {
-            age = 18,
-            endStudy = DateOnly.Parse("2025-05-31"),
-            startStudy = DateOnly.Parse("2024-09-01"),
+            StartStudy = DateOnly.FromDateTime(DateTime.Now)
         };
-
-        student3.name = "KUKU";
-        student3.age = -18;
-        student3.endStudy = DateOnly.Parse("2125-05-31");
+        
+        Console.WriteLine(student.Name);
+        
+        student.ChangeSurname("Xylophone");
         
         Console.WriteLine("Hello, World!");
+        
+        student.Say("Hello");
+        
+
+        Human human = student;
+        human.Say("fdsfsdf");
+        
+        IMoveable moveable = human;
+
+        var students = new[]{student, student2, student3};
+        
+        Array.Sort(students, new StudentComparer());
+
     }
 }
