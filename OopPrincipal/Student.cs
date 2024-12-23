@@ -1,20 +1,34 @@
-﻿using System.Text;
+﻿using System.Security.AccessControl;
+using System.Text;
 
 namespace OopPrincipal;
 
 public class Student : Human, IComparable
 {
+    public string Sex { get; set; }
     public TypeOfStudy TypeOfStudy { get; }
     public DateOnly StartStudy { get; init; }
     public DateOnly EndStudy { get; private set; }
+    public StudentGroup Group { get; set; }
 
-    public Student(string name, int age) : base(name, age)
+    public Student(string name, int age, StudentGroup group) : base(name, age)
     {
+        Group = group;
+        TypeOfStudy = TypeOfStudy.University;
+        EndStudy = StartStudy.AddYears(4);
+    }
+    
+    public Student(string name, int age, string sex, StudentGroup group) : base(name, age)
+    {
+        this.Sex = sex;
+        Group = group;
         TypeOfStudy = TypeOfStudy.University;
         EndStudy = StartStudy.AddYears(4);
     }
 
-    public Student(string name, int age, TypeOfStudy typeOfStudy, DateOnly endStudy): this(name, age)
+    
+
+    public Student(string name, int age, TypeOfStudy typeOfStudy, DateOnly endStudy, StudentGroup group): this(name, age, group)
     {
         TypeOfStudy = typeOfStudy;
         EndStudy = endStudy;

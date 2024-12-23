@@ -2,6 +2,7 @@
 
 public abstract class Human: IMoveable, ISpeakable, IHuman
 {
+    private string sex;
     public string Name { get; protected set; }
     public int Age { get; protected set; }
 
