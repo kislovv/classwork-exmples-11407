@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+	    Console.WriteLine("Hello World!");
 		/*
 		string name = Console.ReadLine();
 		int age = int.Parse(Console.ReadLine());
@@ -34,7 +35,7 @@ class Program
 		catch(Exception ex)
 		{
 			Console.WriteLine($"Произошла ошибка: {ex.Message}");
-		}	
+		}
 		
     }
 	

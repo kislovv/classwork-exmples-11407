@@ -1,4 +1,7 @@
-﻿namespace OopPrincipal;
+﻿using System.Runtime.InteropServices.JavaScript;
+using OopPrincipal.Strategy;
+
+namespace OopPrincipal;
 
 class Program
 {
@@ -30,7 +33,28 @@ class Program
 
         var students = new[]{student, student2, student3};
         
+        
         Array.Sort(students, new StudentComparer());
+        
+        var currency = 15;
+        Console.WriteLine(currency.PluralizeRubles());
 
+
+        Human h = new Student("asdsdf", 312432);
+        Console.WriteLine(h.Name);
+        h.Say("Hello");
+        h = new Employee("sfdf", 21312321)
+        {
+            PlaceOfWork = "Google"
+        };
+        h.Say("Hello");
+
+        var rubberDuck = new RubberDuck(new NoQuack(), new NoFly());
+        rubberDuck.Quack();
+        rubberDuck.QuackBehaviour = new QuackBehaviour();
+        rubberDuck.Quack();
+        rubberDuck.Fly();
+        rubberDuck.FlyBehaviour = new FlyBehavior();
+        rubberDuck.Fly();
     }
 }

@@ -2,9 +2,9 @@
 
 namespace OopPrincipal;
 
-public class Student : Human, IComparable
+public class Student : Human, IComparable, IStudent
 {
-    public TypeOfStudy TypeOfStudy { get; }
+    public virtual TypeOfStudy TypeOfStudy { get; }
     public DateOnly StartStudy { get; init; }
     public DateOnly EndStudy { get; private set; }
 
@@ -64,6 +64,8 @@ public class Student : Human, IComparable
             ? 0 : student.Name.Length < Name.Length 
                 ? -1 : 1;
     }
+
+    public int Cource { get; set; }
 }
 
 public enum TypeOfStudy
