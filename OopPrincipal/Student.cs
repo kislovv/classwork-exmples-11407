@@ -4,14 +4,23 @@ namespace OopPrincipal;
 
 public class Student : Human, IComparable, IStudent
 {
+    public string Sex { get; init; }
+
     public virtual TypeOfStudy TypeOfStudy { get; }
     public DateOnly StartStudy { get; init; }
     public DateOnly EndStudy { get; private set; }
+    
+    public int Cource { get; set; }
 
     public Student(string name, int age) : base(name, age)
     {
         TypeOfStudy = TypeOfStudy.University;
         EndStudy = StartStudy.AddYears(4);
+    }
+
+    public Student(string name, int age, string sex): base(name, age)
+    {
+        Sex = sex;
     }
 
     public Student(string name, int age, TypeOfStudy typeOfStudy, DateOnly endStudy): this(name, age)
@@ -23,6 +32,8 @@ public class Student : Human, IComparable, IStudent
     {
         Age++;
     }
+
+    
 
     public void ChangeSurname(string newSurname)
     {
@@ -65,7 +76,7 @@ public class Student : Human, IComparable, IStudent
                 ? -1 : 1;
     }
 
-    public int Cource { get; set; }
+
 }
 
 public enum TypeOfStudy

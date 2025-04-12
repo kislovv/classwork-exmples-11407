@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices.JavaScript;
+using System.Threading.Channels;
 using OopPrincipal.Strategy;
 
 namespace OopPrincipal;
@@ -7,14 +8,29 @@ class Program
 {
     static void Main(string[] args)
     {
-        var student = new Student("Kislov Kirill" , 18);
+        var student = new Student("Kislov Kirill" , 18)
+        {
+            Cource = 1
+        };
+        
+        var age = student.Age;
+        
+        ChangeStudentCourse(student, ref age);
+
+        Console.WriteLine($"{student.Cource} {age}");
+        
+        var student5 = new Student("Kislov Kirill" , 18, "male");
+        
+        Console.WriteLine($"{student5.Name} : {student5.Sex}");
+        
         var student2 = new Student("Kislov Kirill",
             7, TypeOfStudy.School,
             DateOnly.FromDateTime(DateTime.Now.AddYears(11)));
         
         var student3 = new Student("LOLOLO", 78)
         {
-            StartStudy = DateOnly.FromDateTime(DateTime.Now)
+            StartStudy = DateOnly.FromDateTime(DateTime.Now),
+            Sex = "female",
         };
         
         Console.WriteLine(student.Name);
@@ -56,5 +72,16 @@ class Program
         rubberDuck.Fly();
         rubberDuck.FlyBehaviour = new FlyBehavior();
         rubberDuck.Fly();
+    }
+
+
+    static void ChangeStudentCourse(Student student, ref int age)
+    {
+        student = new Student("Kislov Kirill" , 19)
+        {
+            Cource = 1
+        };
+        student.Cource++;
+        age++;
     }
 }

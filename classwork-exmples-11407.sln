@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopPrincipal", "OopPrincipa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy", "Pharmacy\Pharmacy.csproj", "{7112B6AD-B224-4642-AC73-5B365AD07D6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSTApp", "BSTApp\BSTApp.csproj", "{47509876-E410-4999-851D-03768490D27D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,9 @@ Global
 		{7112B6AD-B224-4642-AC73-5B365AD07D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7112B6AD-B224-4642-AC73-5B365AD07D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7112B6AD-B224-4642-AC73-5B365AD07D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47509876-E410-4999-851D-03768490D27D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47509876-E410-4999-851D-03768490D27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47509876-E410-4999-851D-03768490D27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47509876-E410-4999-851D-03768490D27D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
